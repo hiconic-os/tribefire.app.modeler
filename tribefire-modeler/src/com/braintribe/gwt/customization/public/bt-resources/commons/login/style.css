@@ -1,0 +1,79 @@
+*.loginContent html {
+	height: 100%;
+	min-height: 100%;
+}
+div.loginContent {
+	margin: 0;
+	padding: 0;
+	background-color: black;
+	background-image: url(bg.jpg);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	height: 100%;
+	min-height: 100%;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: medium;
+	color: white;
+	font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+    text-align: center;
+}
+*.loginContent input, *.loginContent textarea, *.loginContent button {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: medium;
+	outline: none;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+}
+*.loginContent img {
+	margin-top: 120px;
+}
+*.loginContent h1 {
+	font-family: 'Open Sans Condensed', sans-serif;
+	text-transform: uppercase;
+	margin: 0px auto 5px auto;
+	padding: 20px 0 0 0;
+	font-size: 48px;
+}
+*.loginContent h2 {
+	font-family: 'Open Sans', sans-serif;
+	font-style: 19px;
+	font-weight: 300;
+	margin: 5px auto 30px auto;
+	padding: 0;
+}
+form.loginForm {
+	width: 210px;
+	margin: 5px auto 0 auto;
+	padding: 30px;
+	background-color: rgba(0,0,0,0.5);
+}
+*.loginContent div {
+	margin-bottom: 15px;
+}
+*.loginContent input {
+	width: 100% !important;
+	padding: 10px !important;
+    height: 35px !important;
+	border:0;
+	background-color: #333;
+	color: white;
+	background-image: none;
+	border-radius: 0px;
+}
+*.loginContent button {
+	padding: 5px 30px !important;
+	font-size: 16px !important;
+	background-color: #ffa500 !important;
+	border:0 !important;
+	cursor: pointer !important;
+    height: 35px !important;
+    width: 100% !important;
+}
+*.loginContent .errorMessage {
+    font-size: small;
+    color: red;
+}

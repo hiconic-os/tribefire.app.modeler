@@ -1,0 +1,1080 @@
+[ {
+  "_id" : "0",
+  "_type" : "com.braintribe.custom.model.datapedia.PortalStartPage",
+  "allData" : [ {
+    "_id" : "1",
+    "_type" : "com.braintribe.custom.model.datapedia.ItemFolder",
+    "content" : {
+      "_id" : "2",
+      "_type" : "com.braintribe.custom.model.datapedia.ModelInfo",
+      "addedDate" : {
+        "_type" : "date",
+        "value" : "2015-11-10T10:47:00.000+0100"
+      },
+      "categories" : [ "lorem" ],
+      "codeSnippets" : [ {
+        "_id" : "3",
+        "_type" : "com.braintribe.custom.model.datapedia.CodeSnippet",
+        "code" : "session.query(EntityQueryBuilder \t.from(RawMaterial.class) \t.where() \t\t.property(\"chemicalName\").eq(\"Glutaral\"));",
+        "id" : 1,
+        "language" : "Java"
+      } ],
+      "description" : "The Pharmaceutical segment of Johnson & Johnson invested $6.2 billion in 2014 on research & development. The Janssen Pharmaceutical Companies of Johnson & Johnson are dedicated to addressing and solving the most important unmet medical needs of our time, including oncology (e.g., multiple myeloma and prostate cancer), immunology (e.g., rheumatoid arthritis, irritable bowel disease and psoriasis), neuroscience (e.g., schizophrenia, dementia and pain), infectious disease (e.g., HIV/AIDS, Hepatitis C and tuberculosis), and cardiovascular and metabolic diseases (e.g., diabetes). Driven by our commitment to patients, we develop sustainable, integrated healthcare solutions by working side-by-side with healthcare stakeholders, based on partnerships of trust and transparency.",
+      "displayName" : {
+        "_id" : "4",
+        "_type" : "com.braintribe.model.generic.i18n.LocalizedString",
+        "id" : {
+          "_type" : "long",
+          "value" : "2"
+        },
+        "localizedValues" : {
+          "_type" : "map",
+          "value" : [ {
+            "key" : "default",
+            "value" : "Pharmaceuticals Data"
+          } ]
+        }
+      },
+      "explorerLink" : "http://projects1.tribefire.com:8080/tribefire-explorer",
+      "icon" : {
+        "_id" : "5",
+        "_type" : "com.braintribe.model.resource.AdaptiveIcon",
+        "id" : {
+          "_type" : "long",
+          "value" : "1"
+        },
+        "name" : null,
+        "representations" : {
+          "_type" : "set",
+          "value" : [ {
+            "_id" : "6",
+            "_type" : "com.braintribe.model.resource.Resource",
+            "created" : {
+              "_type" : "date",
+              "value" : "2015-11-10T10:46:04.238+0100"
+            },
+            "creator" : null,
+            "fileSize" : {
+              "_type" : "long",
+              "value" : "4213"
+            },
+            "id" : "151110104604-3fca59f2-8bb9-4da7-8af6-7991a54f819e",
+            "md5" : "17fa8026c58ce3792611fc237cb9753f",
+            "mimeType" : "image/png",
+            "name" : "pharmaceutical_128.png",
+            "resourceSource" : {
+              "_id" : "7",
+              "_type" : "com.braintribe.model.resource.source.StaticSource",
+              "id" : "151110104604-3fca59f2-8bb9-4da7-8af6-7991a54f819e",
+              "resolverURI" : "1511/1010/46/b2391339-695b-4a1b-a7e5-c5511466f72a"
+            },
+            "securityPolicy" : null,
+            "specification" : {
+              "_id" : "8",
+              "_type" : "com.braintribe.model.resource.specification.RasterImageSpecification",
+              "heightInCm" : {
+                "_type" : "double",
+                "value" : 0.0
+              },
+              "id" : {
+                "_type" : "long",
+                "value" : "1"
+              },
+              "pageCount" : 1,
+              "pixelHeight" : 128,
+              "pixelWidth" : 128,
+              "targetFormat" : null,
+              "widthInCm" : {
+                "_type" : "double",
+                "value" : 0.0
+              }
+            },
+            "tags" : null
+          } ]
+        }
+      },
+      "id" : {
+        "_type" : "long",
+        "value" : "1"
+      },
+      "lastModifiedDate" : {
+        "_type" : "date",
+        "value" : "2015-11-10T10:49:00.000+0100"
+      },
+      "modelerLink" : "http://projects1.tribefire.com:8080/tribefire-control-center",
+      "owner" : {
+        "_id" : "9",
+        "_type" : "com.braintribe.model.user.User",
+        "description" : null,
+        "email" : "john.doe@jnj.com",
+        "firstName" : "John",
+        "groups" : null,
+        "id" : "I_1",
+        "lastLogin" : null,
+        "lastName" : "Doe",
+        "name" : "john_doe",
+        "password" : "*****",
+        "picture" : {
+          "_id" : "10",
+          "_type" : "com.braintribe.model.resource.AdaptiveIcon",
+          "id" : {
+            "_type" : "long",
+            "value" : "2"
+          },
+          "name" : "John Doe",
+          "representations" : {
+            "_type" : "set",
+            "value" : [ {
+              "_id" : "11",
+              "_type" : "com.braintribe.model.resource.Resource",
+              "created" : {
+                "_type" : "date",
+                "value" : "2015-11-10T11:02:54.871+0100"
+              },
+              "creator" : null,
+              "fileSize" : {
+                "_type" : "long",
+                "value" : "53755"
+              },
+              "id" : "151110110254-d82ddefc-3f0a-4a98-96bb-d8126b307dd7",
+              "md5" : "86d7ac406df2f4a38ba8b80376d11ca7",
+              "mimeType" : "image/png",
+              "name" : "JohnDoe.png",
+              "resourceSource" : {
+                "_id" : "12",
+                "_type" : "com.braintribe.model.resource.source.StaticSource",
+                "id" : "151110110254-d82ddefc-3f0a-4a98-96bb-d8126b307dd7",
+                "resolverURI" : "1511/1011/02/542aac00-cc91-4499-ad1d-18ac160e4867"
+              },
+              "securityPolicy" : null,
+              "specification" : {
+                "_id" : "13",
+                "_type" : "com.braintribe.model.resource.specification.RasterImageSpecification",
+                "heightInCm" : {
+                  "_type" : "double",
+                  "value" : 0.0
+                },
+                "id" : {
+                  "_type" : "long",
+                  "value" : "4"
+                },
+                "pageCount" : 1,
+                "pixelHeight" : 218,
+                "pixelWidth" : 230,
+                "targetFormat" : null,
+                "widthInCm" : {
+                  "_type" : "double",
+                  "value" : 0.0
+                }
+              },
+              "tags" : null
+            } ]
+          }
+        },
+        "roles" : null
+      },
+      "rating" : 4,
+      "resources" : [ {
+        "_id" : "14",
+        "_type" : "com.braintribe.model.resource.Resource",
+        "created" : {
+          "_type" : "date",
+          "value" : "2015-11-10T10:58:17.969+0100"
+        },
+        "creator" : null,
+        "fileSize" : {
+          "_type" : "long",
+          "value" : "421329"
+        },
+        "id" : "151110105817-755f5d92-3e19-4d48-9562-4403b3858452",
+        "md5" : "570ba9d10ba303eb44e9c23e4d29aaa9",
+        "mimeType" : "image/png",
+        "name" : "RawMaterialModel.png",
+        "resourceSource" : {
+          "_id" : "15",
+          "_type" : "com.braintribe.model.resource.source.StaticSource",
+          "id" : "151110105817-755f5d92-3e19-4d48-9562-4403b3858452",
+          "resolverURI" : "1511/1010/58/adcd8455-0806-43b4-a3d9-f5ce35c07528"
+        },
+        "securityPolicy" : null,
+        "specification" : {
+          "_id" : "16",
+          "_type" : "com.braintribe.model.resource.specification.RasterImageSpecification",
+          "heightInCm" : {
+            "_type" : "double",
+            "value" : 0.0
+          },
+          "id" : {
+            "_type" : "long",
+            "value" : "2"
+          },
+          "pageCount" : 1,
+          "pixelHeight" : 816,
+          "pixelWidth" : 1630,
+          "targetFormat" : null,
+          "widthInCm" : {
+            "_type" : "double",
+            "value" : 0.0
+          }
+        },
+        "tags" : null
+      } ]
+    },
+    "deniedFor" : null,
+    "displayName" : {
+      "_id" : "17",
+      "_type" : "com.braintribe.model.generic.i18n.LocalizedString",
+      "id" : {
+        "_type" : "long",
+        "value" : "1"
+      },
+      "localizedValues" : {
+        "_type" : "map",
+        "value" : [ {
+          "key" : "default",
+          "value" : "Pharmaceuticals"
+        } ]
+      }
+    },
+    "effectiveDeniedFor" : null,
+    "effectiveGrantedFor" : null,
+    "grantedFor" : null,
+    "icon" : {
+      "_ref" : "5"
+    },
+    "id" : {
+      "_type" : "long",
+      "value" : "1"
+    },
+    "name" : "Pharmaceuticals",
+    "parent" : null,
+    "securityPolicy" : null,
+    "subFolders" : null,
+    "tags" : null
+  }, {
+    "_id" : "18",
+    "_type" : "com.braintribe.custom.model.datapedia.ItemFolder",
+    "content" : {
+      "_id" : "19",
+      "_type" : "com.braintribe.custom.model.datapedia.ModelInfo",
+      "addedDate" : null,
+      "categories" : null,
+      "codeSnippets" : null,
+      "description" : null,
+      "displayName" : {
+        "_id" : "20",
+        "_type" : "com.braintribe.model.generic.i18n.LocalizedString",
+        "id" : {
+          "_type" : "long",
+          "value" : "3"
+        },
+        "localizedValues" : {
+          "_type" : "map",
+          "value" : [ {
+            "key" : "default",
+            "value" : "Consumer Healthcare"
+          } ]
+        }
+      },
+      "explorerLink" : null,
+      "icon" : {
+        "_id" : "21",
+        "_type" : "com.braintribe.model.resource.AdaptiveIcon",
+        "id" : {
+          "_type" : "long",
+          "value" : "4"
+        },
+        "name" : "Consumer Healthcare",
+        "representations" : {
+          "_type" : "set",
+          "value" : [ {
+            "_id" : "22",
+            "_type" : "com.braintribe.model.resource.Resource",
+            "created" : {
+              "_type" : "date",
+              "value" : "2015-11-10T11:17:21.650+0100"
+            },
+            "creator" : null,
+            "fileSize" : {
+              "_type" : "long",
+              "value" : "4494"
+            },
+            "id" : "151110111721-6f3d5c57-cb7d-40eb-96c3-ac4974aac19b",
+            "md5" : "08b49b18c11af987990ca554be87dec9",
+            "mimeType" : "image/png",
+            "name" : "consumerhealthcare_128.png",
+            "resourceSource" : {
+              "_id" : "23",
+              "_type" : "com.braintribe.model.resource.source.StaticSource",
+              "id" : "151110111721-6f3d5c57-cb7d-40eb-96c3-ac4974aac19b",
+              "resolverURI" : "1511/1011/17/a938d33d-c921-476e-8d1b-68484ca9d8d5"
+            },
+            "securityPolicy" : null,
+            "specification" : {
+              "_id" : "24",
+              "_type" : "com.braintribe.model.resource.specification.RasterImageSpecification",
+              "heightInCm" : {
+                "_type" : "double",
+                "value" : 0.0
+              },
+              "id" : {
+                "_type" : "long",
+                "value" : "5"
+              },
+              "pageCount" : 1,
+              "pixelHeight" : 128,
+              "pixelWidth" : 128,
+              "targetFormat" : null,
+              "widthInCm" : {
+                "_type" : "double",
+                "value" : 0.0
+              }
+            },
+            "tags" : null
+          } ]
+        }
+      },
+      "id" : {
+        "_type" : "long",
+        "value" : "2"
+      },
+      "lastModifiedDate" : null,
+      "modelerLink" : null,
+      "owner" : null,
+      "rating" : null,
+      "resources" : null
+    },
+    "deniedFor" : null,
+    "displayName" : {
+      "_id" : "25",
+      "_type" : "com.braintribe.model.generic.i18n.LocalizedString",
+      "id" : {
+        "_type" : "long",
+        "value" : "9"
+      },
+      "localizedValues" : {
+        "_type" : "map",
+        "value" : [ {
+          "key" : "default",
+          "value" : "Consumer Healthcare"
+        } ]
+      }
+    },
+    "effectiveDeniedFor" : null,
+    "effectiveGrantedFor" : null,
+    "grantedFor" : null,
+    "icon" : {
+      "_ref" : "21"
+    },
+    "id" : {
+      "_type" : "long",
+      "value" : "2"
+    },
+    "name" : "Consumer Healthcare",
+    "parent" : null,
+    "securityPolicy" : null,
+    "subFolders" : null,
+    "tags" : null
+  }, {
+    "_id" : "26",
+    "_type" : "com.braintribe.custom.model.datapedia.ItemFolder",
+    "content" : {
+      "_id" : "27",
+      "_type" : "com.braintribe.custom.model.datapedia.ModelInfo",
+      "addedDate" : null,
+      "categories" : null,
+      "codeSnippets" : null,
+      "description" : null,
+      "displayName" : {
+        "_id" : "28",
+        "_type" : "com.braintribe.model.generic.i18n.LocalizedString",
+        "id" : {
+          "_type" : "long",
+          "value" : "4"
+        },
+        "localizedValues" : {
+          "_type" : "map",
+          "value" : [ {
+            "key" : "default",
+            "value" : "Medical Devices"
+          } ]
+        }
+      },
+      "explorerLink" : null,
+      "icon" : {
+        "_id" : "29",
+        "_type" : "com.braintribe.model.resource.AdaptiveIcon",
+        "id" : {
+          "_type" : "long",
+          "value" : "5"
+        },
+        "name" : null,
+        "representations" : {
+          "_type" : "set",
+          "value" : [ {
+            "_id" : "30",
+            "_type" : "com.braintribe.model.resource.Resource",
+            "created" : {
+              "_type" : "date",
+              "value" : "2015-11-10T11:17:21.676+0100"
+            },
+            "creator" : null,
+            "fileSize" : {
+              "_type" : "long",
+              "value" : "4371"
+            },
+            "id" : "151110111721-8a781f62-be36-4c52-a49d-e05ab72bb6af",
+            "md5" : "893c0039d7d0d1fdf69528c457578d81",
+            "mimeType" : "image/png",
+            "name" : "medicaldevice_128.png",
+            "resourceSource" : {
+              "_id" : "31",
+              "_type" : "com.braintribe.model.resource.source.StaticSource",
+              "id" : "151110111721-8a781f62-be36-4c52-a49d-e05ab72bb6af",
+              "resolverURI" : "1511/1011/17/89481e1d-bdb6-4caa-9875-d73370a0725f"
+            },
+            "securityPolicy" : null,
+            "specification" : {
+              "_id" : "32",
+              "_type" : "com.braintribe.model.resource.specification.RasterImageSpecification",
+              "heightInCm" : {
+                "_type" : "double",
+                "value" : 0.0
+              },
+              "id" : {
+                "_type" : "long",
+                "value" : "9"
+              },
+              "pageCount" : 1,
+              "pixelHeight" : 128,
+              "pixelWidth" : 128,
+              "targetFormat" : null,
+              "widthInCm" : {
+                "_type" : "double",
+                "value" : 0.0
+              }
+            },
+            "tags" : null
+          } ]
+        }
+      },
+      "id" : {
+        "_type" : "long",
+        "value" : "3"
+      },
+      "lastModifiedDate" : null,
+      "modelerLink" : null,
+      "owner" : null,
+      "rating" : null,
+      "resources" : null
+    },
+    "deniedFor" : null,
+    "displayName" : {
+      "_id" : "33",
+      "_type" : "com.braintribe.model.generic.i18n.LocalizedString",
+      "id" : {
+        "_type" : "long",
+        "value" : "10"
+      },
+      "localizedValues" : {
+        "_type" : "map",
+        "value" : [ {
+          "key" : "default",
+          "value" : "Medical Devices"
+        } ]
+      }
+    },
+    "effectiveDeniedFor" : null,
+    "effectiveGrantedFor" : null,
+    "grantedFor" : null,
+    "icon" : {
+      "_ref" : "29"
+    },
+    "id" : {
+      "_type" : "long",
+      "value" : "3"
+    },
+    "name" : "Medical Devices",
+    "parent" : null,
+    "securityPolicy" : null,
+    "subFolders" : null,
+    "tags" : null
+  }, {
+    "_id" : "34",
+    "_type" : "com.braintribe.custom.model.datapedia.ItemFolder",
+    "content" : {
+      "_id" : "35",
+      "_type" : "com.braintribe.custom.model.datapedia.ModelInfo",
+      "addedDate" : null,
+      "categories" : null,
+      "codeSnippets" : null,
+      "description" : null,
+      "displayName" : {
+        "_id" : "36",
+        "_type" : "com.braintribe.model.generic.i18n.LocalizedString",
+        "id" : {
+          "_type" : "long",
+          "value" : "5"
+        },
+        "localizedValues" : {
+          "_type" : "map",
+          "value" : [ {
+            "key" : "default",
+            "value" : "Global Orthopaedics"
+          } ]
+        }
+      },
+      "explorerLink" : null,
+      "icon" : {
+        "_id" : "37",
+        "_type" : "com.braintribe.model.resource.AdaptiveIcon",
+        "id" : {
+          "_type" : "long",
+          "value" : "6"
+        },
+        "name" : "Global Orthopaedics",
+        "representations" : {
+          "_type" : "set",
+          "value" : [ {
+            "_id" : "38",
+            "_type" : "com.braintribe.model.resource.Resource",
+            "created" : {
+              "_type" : "date",
+              "value" : "2015-11-10T11:17:21.669+0100"
+            },
+            "creator" : null,
+            "fileSize" : {
+              "_type" : "long",
+              "value" : "5104"
+            },
+            "id" : "151110111721-01648413-3701-4c18-8376-8efc4269253d",
+            "md5" : "803207009b0515586736a55409a36ade",
+            "mimeType" : "image/png",
+            "name" : "globalorthopaedics_128.png",
+            "resourceSource" : {
+              "_id" : "39",
+              "_type" : "com.braintribe.model.resource.source.StaticSource",
+              "id" : "151110111721-01648413-3701-4c18-8376-8efc4269253d",
+              "resolverURI" : "1511/1011/17/78058b18-7d54-4cfa-8149-3dca8f420e8e"
+            },
+            "securityPolicy" : null,
+            "specification" : {
+              "_id" : "40",
+              "_type" : "com.braintribe.model.resource.specification.RasterImageSpecification",
+              "heightInCm" : {
+                "_type" : "double",
+                "value" : 0.0
+              },
+              "id" : {
+                "_type" : "long",
+                "value" : "7"
+              },
+              "pageCount" : 1,
+              "pixelHeight" : 128,
+              "pixelWidth" : 128,
+              "targetFormat" : null,
+              "widthInCm" : {
+                "_type" : "double",
+                "value" : 0.0
+              }
+            },
+            "tags" : null
+          } ]
+        }
+      },
+      "id" : {
+        "_type" : "long",
+        "value" : "4"
+      },
+      "lastModifiedDate" : null,
+      "modelerLink" : null,
+      "owner" : null,
+      "rating" : null,
+      "resources" : null
+    },
+    "deniedFor" : null,
+    "displayName" : {
+      "_id" : "41",
+      "_type" : "com.braintribe.model.generic.i18n.LocalizedString",
+      "id" : {
+        "_type" : "long",
+        "value" : "11"
+      },
+      "localizedValues" : {
+        "_type" : "map",
+        "value" : [ {
+          "key" : "default",
+          "value" : "Global Orthopaedics"
+        } ]
+      }
+    },
+    "effectiveDeniedFor" : null,
+    "effectiveGrantedFor" : null,
+    "grantedFor" : null,
+    "icon" : {
+      "_ref" : "37"
+    },
+    "id" : {
+      "_type" : "long",
+      "value" : "4"
+    },
+    "name" : "Global Orthopaedics",
+    "parent" : null,
+    "securityPolicy" : null,
+    "subFolders" : null,
+    "tags" : null
+  }, {
+    "_id" : "42",
+    "_type" : "com.braintribe.custom.model.datapedia.ItemFolder",
+    "content" : {
+      "_id" : "43",
+      "_type" : "com.braintribe.custom.model.datapedia.ModelInfo",
+      "addedDate" : null,
+      "categories" : null,
+      "codeSnippets" : null,
+      "description" : null,
+      "displayName" : {
+        "_id" : "44",
+        "_type" : "com.braintribe.model.generic.i18n.LocalizedString",
+        "id" : {
+          "_type" : "long",
+          "value" : "6"
+        },
+        "localizedValues" : {
+          "_type" : "map",
+          "value" : [ {
+            "key" : "default",
+            "value" : "Raw Materials"
+          } ]
+        }
+      },
+      "explorerLink" : null,
+      "icon" : {
+        "_id" : "45",
+        "_type" : "com.braintribe.model.resource.AdaptiveIcon",
+        "id" : {
+          "_type" : "long",
+          "value" : "7"
+        },
+        "name" : null,
+        "representations" : {
+          "_type" : "set",
+          "value" : [ {
+            "_id" : "46",
+            "_type" : "com.braintribe.model.resource.Resource",
+            "created" : {
+              "_type" : "date",
+              "value" : "2015-11-10T11:17:21.678+0100"
+            },
+            "creator" : null,
+            "fileSize" : {
+              "_type" : "long",
+              "value" : "3528"
+            },
+            "id" : "151110111721-5ae9d2d7-439e-4e60-bc60-c16a3fcf9f31",
+            "md5" : "236d9725961ddbe3c75c60bb17ff524a",
+            "mimeType" : "image/png",
+            "name" : "rawmaterials_128.png",
+            "resourceSource" : {
+              "_id" : "47",
+              "_type" : "com.braintribe.model.resource.source.StaticSource",
+              "id" : "151110111721-5ae9d2d7-439e-4e60-bc60-c16a3fcf9f31",
+              "resolverURI" : "1511/1011/17/d078fa24-c3d3-47b3-a184-4134ea109b75"
+            },
+            "securityPolicy" : null,
+            "specification" : {
+              "_id" : "48",
+              "_type" : "com.braintribe.model.resource.specification.RasterImageSpecification",
+              "heightInCm" : {
+                "_type" : "double",
+                "value" : 0.0
+              },
+              "id" : {
+                "_type" : "long",
+                "value" : "10"
+              },
+              "pageCount" : 1,
+              "pixelHeight" : 128,
+              "pixelWidth" : 128,
+              "targetFormat" : null,
+              "widthInCm" : {
+                "_type" : "double",
+                "value" : 0.0
+              }
+            },
+            "tags" : null
+          } ]
+        }
+      },
+      "id" : {
+        "_type" : "long",
+        "value" : "5"
+      },
+      "lastModifiedDate" : null,
+      "modelerLink" : null,
+      "owner" : null,
+      "rating" : null,
+      "resources" : null
+    },
+    "deniedFor" : null,
+    "displayName" : {
+      "_id" : "49",
+      "_type" : "com.braintribe.model.generic.i18n.LocalizedString",
+      "id" : {
+        "_type" : "long",
+        "value" : "12"
+      },
+      "localizedValues" : {
+        "_type" : "map",
+        "value" : [ {
+          "key" : "default",
+          "value" : "Raw Materials"
+        } ]
+      }
+    },
+    "effectiveDeniedFor" : null,
+    "effectiveGrantedFor" : null,
+    "grantedFor" : null,
+    "icon" : {
+      "_ref" : "45"
+    },
+    "id" : {
+      "_type" : "long",
+      "value" : "5"
+    },
+    "name" : "Raw Materials",
+    "parent" : null,
+    "securityPolicy" : null,
+    "subFolders" : null,
+    "tags" : null
+  }, {
+    "_id" : "50",
+    "_type" : "com.braintribe.custom.model.datapedia.ItemFolder",
+    "content" : {
+      "_id" : "51",
+      "_type" : "com.braintribe.custom.model.datapedia.ModelInfo",
+      "addedDate" : null,
+      "categories" : null,
+      "codeSnippets" : null,
+      "description" : null,
+      "displayName" : {
+        "_id" : "52",
+        "_type" : "com.braintribe.model.generic.i18n.LocalizedString",
+        "id" : {
+          "_type" : "long",
+          "value" : "7"
+        },
+        "localizedValues" : {
+          "_type" : "map",
+          "value" : [ {
+            "key" : "default",
+            "value" : "Consumer Products"
+          } ]
+        }
+      },
+      "explorerLink" : null,
+      "icon" : {
+        "_id" : "53",
+        "_type" : "com.braintribe.model.resource.AdaptiveIcon",
+        "id" : {
+          "_type" : "long",
+          "value" : "8"
+        },
+        "name" : null,
+        "representations" : {
+          "_type" : "set",
+          "value" : [ {
+            "_id" : "54",
+            "_type" : "com.braintribe.model.resource.Resource",
+            "created" : {
+              "_type" : "date",
+              "value" : "2015-11-10T11:17:21.665+0100"
+            },
+            "creator" : null,
+            "fileSize" : {
+              "_type" : "long",
+              "value" : "2714"
+            },
+            "id" : "151110111721-3492708b-19ed-4f3c-a463-ce7ad3359f48",
+            "md5" : "8b8608886a1c6942595c339f14da7b65",
+            "mimeType" : "image/png",
+            "name" : "consumerproducts_128.png",
+            "resourceSource" : {
+              "_id" : "55",
+              "_type" : "com.braintribe.model.resource.source.StaticSource",
+              "id" : "151110111721-3492708b-19ed-4f3c-a463-ce7ad3359f48",
+              "resolverURI" : "1511/1011/17/5066702d-7032-4531-b965-298e47cf7783"
+            },
+            "securityPolicy" : null,
+            "specification" : {
+              "_id" : "56",
+              "_type" : "com.braintribe.model.resource.specification.RasterImageSpecification",
+              "heightInCm" : {
+                "_type" : "double",
+                "value" : 0.0
+              },
+              "id" : {
+                "_type" : "long",
+                "value" : "6"
+              },
+              "pageCount" : 1,
+              "pixelHeight" : 128,
+              "pixelWidth" : 128,
+              "targetFormat" : null,
+              "widthInCm" : {
+                "_type" : "double",
+                "value" : 0.0
+              }
+            },
+            "tags" : null
+          } ]
+        }
+      },
+      "id" : {
+        "_type" : "long",
+        "value" : "6"
+      },
+      "lastModifiedDate" : null,
+      "modelerLink" : null,
+      "owner" : null,
+      "rating" : null,
+      "resources" : null
+    },
+    "deniedFor" : null,
+    "displayName" : {
+      "_id" : "57",
+      "_type" : "com.braintribe.model.generic.i18n.LocalizedString",
+      "id" : {
+        "_type" : "long",
+        "value" : "13"
+      },
+      "localizedValues" : {
+        "_type" : "map",
+        "value" : [ {
+          "key" : "default",
+          "value" : "Consumer Products"
+        } ]
+      }
+    },
+    "effectiveDeniedFor" : null,
+    "effectiveGrantedFor" : null,
+    "grantedFor" : null,
+    "icon" : {
+      "_ref" : "53"
+    },
+    "id" : {
+      "_type" : "long",
+      "value" : "6"
+    },
+    "name" : "Consumer Products",
+    "parent" : null,
+    "securityPolicy" : null,
+    "subFolders" : null,
+    "tags" : null
+  }, {
+    "_id" : "58",
+    "_type" : "com.braintribe.custom.model.datapedia.ItemFolder",
+    "content" : {
+      "_id" : "59",
+      "_type" : "com.braintribe.custom.model.datapedia.ModelInfo",
+      "addedDate" : null,
+      "categories" : null,
+      "codeSnippets" : null,
+      "description" : null,
+      "displayName" : {
+        "_id" : "60",
+        "_type" : "com.braintribe.model.generic.i18n.LocalizedString",
+        "id" : {
+          "_type" : "long",
+          "value" : "8"
+        },
+        "localizedValues" : {
+          "_type" : "map",
+          "value" : [ {
+            "key" : "default",
+            "value" : "Locations"
+          } ]
+        }
+      },
+      "explorerLink" : null,
+      "icon" : {
+        "_id" : "61",
+        "_type" : "com.braintribe.model.resource.AdaptiveIcon",
+        "id" : {
+          "_type" : "long",
+          "value" : "9"
+        },
+        "name" : null,
+        "representations" : {
+          "_type" : "set",
+          "value" : [ {
+            "_id" : "62",
+            "_type" : "com.braintribe.model.resource.Resource",
+            "created" : {
+              "_type" : "date",
+              "value" : "2015-11-10T11:17:21.673+0100"
+            },
+            "creator" : null,
+            "fileSize" : {
+              "_type" : "long",
+              "value" : "2868"
+            },
+            "id" : "151110111721-b01160ed-8026-4f57-8247-e99303ef188b",
+            "md5" : "68e1810ca2c998ae32ab2e4ec4413039",
+            "mimeType" : "image/png",
+            "name" : "location_128.png",
+            "resourceSource" : {
+              "_id" : "63",
+              "_type" : "com.braintribe.model.resource.source.StaticSource",
+              "id" : "151110111721-b01160ed-8026-4f57-8247-e99303ef188b",
+              "resolverURI" : "1511/1011/17/de9c7052-73f8-4169-904b-67f9a58c070b"
+            },
+            "securityPolicy" : null,
+            "specification" : {
+              "_id" : "64",
+              "_type" : "com.braintribe.model.resource.specification.RasterImageSpecification",
+              "heightInCm" : {
+                "_type" : "double",
+                "value" : 0.0
+              },
+              "id" : {
+                "_type" : "long",
+                "value" : "8"
+              },
+              "pageCount" : 1,
+              "pixelHeight" : 128,
+              "pixelWidth" : 128,
+              "targetFormat" : null,
+              "widthInCm" : {
+                "_type" : "double",
+                "value" : 0.0
+              }
+            },
+            "tags" : null
+          } ]
+        }
+      },
+      "id" : {
+        "_type" : "long",
+        "value" : "7"
+      },
+      "lastModifiedDate" : null,
+      "modelerLink" : null,
+      "owner" : null,
+      "rating" : null,
+      "resources" : null
+    },
+    "deniedFor" : null,
+    "displayName" : {
+      "_id" : "65",
+      "_type" : "com.braintribe.model.generic.i18n.LocalizedString",
+      "id" : {
+        "_type" : "long",
+        "value" : "14"
+      },
+      "localizedValues" : {
+        "_type" : "map",
+        "value" : [ {
+          "key" : "default",
+          "value" : "Locations"
+        } ]
+      }
+    },
+    "effectiveDeniedFor" : null,
+    "effectiveGrantedFor" : null,
+    "grantedFor" : null,
+    "icon" : {
+      "_ref" : "61"
+    },
+    "id" : {
+      "_type" : "long",
+      "value" : "7"
+    },
+    "name" : "Locations",
+    "parent" : null,
+    "securityPolicy" : null,
+    "subFolders" : null,
+    "tags" : null
+  } ],
+  "datapediaIcon" : {
+    "_id" : "66",
+    "_type" : "com.braintribe.model.resource.AdaptiveIcon",
+    "id" : {
+      "_type" : "long",
+      "value" : "10"
+    },
+    "name" : "Datapedia Icon",
+    "representations" : {
+      "_type" : "set",
+      "value" : [ {
+        "_id" : "67",
+        "_type" : "com.braintribe.model.resource.Resource",
+        "created" : {
+          "_type" : "date",
+          "value" : "2015-11-10T11:41:48.663+0100"
+        },
+        "creator" : null,
+        "fileSize" : {
+          "_type" : "long",
+          "value" : "22957"
+        },
+        "id" : "151110114148-fcacbc12-a5b9-4b72-917b-7e7507382e8d",
+        "md5" : "d2c4d4a55285e02d60c9787f2d3c692b",
+        "mimeType" : "image/png",
+        "name" : "Datapedia_logo.png",
+        "resourceSource" : {
+          "_id" : "68",
+          "_type" : "com.braintribe.model.resource.source.StaticSource",
+          "id" : "151110114148-fcacbc12-a5b9-4b72-917b-7e7507382e8d",
+          "resolverURI" : "1511/1011/41/5d8fd3b1-f590-42a7-ad0b-be498b1143cd"
+        },
+        "securityPolicy" : null,
+        "specification" : {
+          "_id" : "69",
+          "_type" : "com.braintribe.model.resource.specification.RasterImageSpecification",
+          "heightInCm" : {
+            "_type" : "double",
+            "value" : 0.0
+          },
+          "id" : {
+            "_type" : "long",
+            "value" : "11"
+          },
+          "pageCount" : 1,
+          "pixelHeight" : 90,
+          "pixelWidth" : 448,
+          "targetFormat" : null,
+          "widthInCm" : {
+            "_type" : "double",
+            "value" : 0.0
+          }
+        },
+        "tags" : null
+      } ]
+    }
+  },
+  "featured" : [ {
+    "_ref" : "18"
+  }, {
+    "_ref" : "1"
+  }, {
+    "_ref" : "26"
+  } ],
+  "id" : 1,
+  "newest" : [ {
+    "_ref" : "42"
+  }, {
+    "_ref" : "34"
+  }, {
+    "_ref" : "26"
+  } ],
+  "recentlyUsedItems" : [ {
+    "_ref" : "18"
+  }, {
+    "_ref" : "42"
+  }, {
+    "_ref" : "58"
+  }, {
+    "_ref" : "1"
+  } ]
+} ]

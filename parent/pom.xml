@@ -1,0 +1,38 @@
+<!--
+Copyright BRAINTRIBE TECHNOLOGY GMBH, Austria, 2002-2022
+
+This library is free software; you can redistribute it and/or modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public License along with this library; See http://www.gnu.org/licenses/.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>tribefire.app.modeler</groupId>
+    <artifactId>parent</artifactId>
+    <version>3.0.5</version>
+    <packaging>pom</packaging>
+    <properties>
+        <java.version>1.8</java.version>
+        <V.com.braintribe.devrock>[2.0,2.1)</V.com.braintribe.devrock>
+        <V.tribefire.cortex>[2.0,2.1)</V.tribefire.cortex>
+        <gwt-compatible>true</gwt-compatible>
+        <V.com.braintribe.common>[2.0,2.1)</V.com.braintribe.common>
+        <V.tribefire.app.modeler>[3.0,3.1)</V.tribefire.app.modeler>
+        <V.tribefire.gwt>[3.0,3.1)</V.tribefire.gwt>
+        <V.tribefire.js>[3.0,3.1)</V.tribefire.js>
+        <V.com.google.gwt>2.8.0</V.com.google.gwt>
+        <V.com.sencha.gxt>4.0.2</V.com.sencha.gxt>
+    </properties>
+    <licenses>
+        <license>
+            <name>GNU Lesser General Public License v3.0</name>
+            <url>https://www.gnu.org/licenses/lgpl-3.0.html</url>
+            <distribution>repo</distribution>
+            <comments>A free software license that allows users to run, study, share, and modify the software.</comments>
+        </license>
+    </licenses>
+</project>

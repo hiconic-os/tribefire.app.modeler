@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Context path="" crossContext="true">
+	<WatchedResource>WEB-INF/web.xml</WatchedResource>
+</Context>

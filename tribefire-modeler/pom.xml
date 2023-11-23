@@ -1,0 +1,112 @@
+<!--
+Copyright BRAINTRIBE TECHNOLOGY GMBH, Austria, 2002-2022
+
+This library is free software; you can redistribute it and/or modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public License along with this library; See http://www.gnu.org/licenses/.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>tribefire.app.modeler</groupId>
+        <artifactId>parent</artifactId>
+        <version>[3.0,3.1)</version>
+    </parent>
+    <artifactId>tribefire-modeler</artifactId>
+    <version>3.0.196</version>
+    <packaging>war</packaging>
+    <properties>
+        <archetype>war</archetype>
+        <!-- Exclude dependencies tagged with 'serverdeps' -->
+        <tagRule.classpath>!serverdeps</tagRule.classpath>
+        <gwt-compatible>true</gwt-compatible>
+        <jsinterop>true</jsinterop>
+    </properties>
+    <licenses>
+        <license>
+            <name>GNU Lesser General Public License v3.0</name>
+            <url>https://www.gnu.org/licenses/lgpl-3.0.html</url>
+            <distribution>repo</distribution>
+            <comments>A free software license that allows users to run, study, share, and modify the software.</comments>
+        </license>
+    </licenses>
+    <dependencies>
+        <dependency>
+            <groupId>tribefire.gwt</groupId>
+            <artifactId>basic-ioc-set-for-gme</artifactId>
+            <scope>compile</scope>
+            <version>${V.tribefire.gwt}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-dev</artifactId>
+            <scope>compile</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>xerces</groupId>
+                    <artifactId>xercesImpl</artifactId>
+                </exclusion>
+            </exclusions>
+            <version>${V.com.google.gwt}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-user</artifactId>
+            <scope>compile</scope>
+            <version>${V.com.google.gwt}</version>
+        </dependency>
+        <dependency>
+            <groupId>tribefire.gwt</groupId>
+            <artifactId>tribefire-gwt-serverdeps</artifactId>
+            <version>${V.tribefire.gwt}</version>
+            <scope>runtime</scope>
+            <?tag serverdeps?>
+        </dependency>
+        <dependency>
+            <groupId>com.braintribe.common</groupId>
+            <artifactId>jsinterop-base</artifactId>
+            <version>${V.com.braintribe.common}</version>
+        </dependency>
+        <dependency>
+            <groupId>tribefire.js</groupId>
+            <artifactId>async-module</artifactId>
+            <version>${V.tribefire.js}</version>
+        </dependency>
+        <dependency>
+            <groupId>tribefire.js</groupId>
+            <artifactId>tribefire-js-ioc</artifactId>
+            <version>${V.tribefire.js}</version>
+        </dependency>
+        <dependency>
+            <groupId>tribefire.js</groupId>
+            <artifactId>tribefire-js-module</artifactId>
+            <version>${V.tribefire.js}</version>
+        </dependency>
+        <dependency>
+            <groupId>tribefire.js</groupId>
+            <artifactId>gwt-gm-core</artifactId>
+            <version>${V.tribefire.js}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sencha.gxt</groupId>
+            <artifactId>gxt</artifactId>
+            <version>${V.com.sencha.gxt}</version>
+        </dependency>
+        <dependency>
+            <groupId>tribefire.gwt</groupId>
+            <artifactId>customization-ui-module</artifactId>
+            <version>${V.tribefire.gwt}</version>
+        </dependency>
+        <!-- This dependency is needed in the build.xml to collect the classpath -->
+        <dependency>
+            <groupId>com.braintribe.devrock</groupId>
+            <artifactId>file-classpath-classloader</artifactId>
+            <scope>compile</scope>
+            <version>${V.com.braintribe.devrock}</version>
+        </dependency>
+    </dependencies>
+</project>

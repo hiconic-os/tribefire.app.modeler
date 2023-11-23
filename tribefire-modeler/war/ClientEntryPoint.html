@@ -1,0 +1,398 @@
+<%@ page session="false" %>
+  <!DOCTYPE html>
+  <html>
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>tribefire Modeler</title>
+
+    <!--CSS for loading message at application Startup-->
+    <style type="text/css">
+      .ace_editor * {
+        font-family: monospace !important;
+      }
+
+      #loading {
+        position: absolute;
+        left: 45%;
+        top: 35%;
+        margin-left: -31px;
+        margin-top: 12px;
+        padding: 2px;
+        z-index: 20001;
+        height: auto;
+        /*border: 1px solid #ccc;*/
+      }
+
+      #loading a {
+        color: #225588;
+      }
+
+      #loading .loading-indicator {
+        background: white;
+        color: #444;
+        font: bold 13px tahoma, arial, helvetica;
+        padding: 10px;
+        margin: 0;
+        height: auto;
+      }
+
+      #loading .loading-indicator img {
+        margin-right: 8px;
+        float: left;
+        vertical-align: top;
+      }
+
+      #loading-msg {
+        font: normal 10px arial, tahoma, sans-serif;
+      }
+      
+      .loadingLogoParent {
+      	height: 200px;
+      	position: relative;
+      }
+      
+      #loadingLogoImage {
+      	max-height: 200px;
+      	display: block;
+      	margin-top: auto;
+      	margin-bottom: auto;
+		margin-left: auto;
+		margin-right: auto;
+		bottom: 0;
+		left: 0;
+        right: 0;
+        position: absolute;
+      }
+      
+      #loadingTitleText, #loadingMessageText {
+      	text-align: center;
+      	font: normal 12px arial, tahoma, sans-serif;
+      }
+      
+      #loadingTitleText {
+      	margin-top: 8px;
+      }
+      
+      #loadingMessageText {
+      	margin-top: 8px;
+      }
+      
+      .progress-grey {
+      	color: #000 !important;
+      	background-color: #f1f1f1 !important;
+      	margin-top: 16px;
+      	margin-bottom: 10px;
+      	width: 250px;
+      }
+      
+      .progress-blue {
+      	color: #fff !important;
+      	background-color: #2196f3 !important;
+      }
+    </style>
+
+	<!--
+    <style type="text/css">
+      body,
+      td,
+      a,
+      div,
+      .p {
+        font-family: arial, sans-serif
+      }
+
+      a:link,
+      .w,
+      .w a:link {
+        color: #0000cc
+      }
+
+      a:visited {
+        color: #551a8b
+      }
+
+      a:active {
+        color: #ff0000
+      }
+    </style>
+    -->
+
+    <%
+    	com.braintribe.model.processing.bootstrapping.TribefireHtmlHeadFragmentWriter.write(out,com.braintribe.model.processing.bootstrapping.TribefireRuntime.getPublicProperties());
+    %>
+
+      <script type="text/javascript">
+      	var progressBarValue = 1;
+      	var timer;
+      
+        function getDefaultLocale() {
+          var nodes = document.getElementsByTagName("meta");
+          var gwtProperties = {};
+
+          for (var i = 0; i < nodes.length; i++) {
+            var node = nodes[i];
+            if (node.getAttribute("name") == "gwt:property") {
+              var content = node.getAttribute("content");
+              var parts = content.split("=");
+              var key = parts[0];
+              var value = parts[1];
+              gwtProperties[key] = value;
+            }
+          }
+
+          return gwtProperties["locale"];
+        }
+
+        function inject() {
+          //injectImg("BtClientCustomization/bt-resources/commons/large-loading.gif", "loading-img")
+          injectLink("BtClientCustomization/bt-resources/commons/login/style.css", "text/css", "stylesheet");
+          injectLink("favicon.ico", "image/x-icon", "shortcut icon");
+
+          injectScript("BtClientCustomization/ace/ace.js", document.head, function() {
+            injectScript("BtClientCustomization/ace/theme-eclipse.js", document.head);
+            injectScript("BtClientCustomization/ace/theme-twilight.js", document.head);
+            injectScript("BtClientCustomization/ace/mode-java.js", document.head);
+            injectScript("BtClientCustomization/ace/mode-groovy.js", document.head);
+            injectScript("BtClientCustomization/ace/mode-javascript.js", document.head);
+            injectScript("BtClientCustomization/ace/ext-language_tools.js", document.head);
+          });
+
+          injectScript("BtClientCustomization/bt-resources/commons/js/jquery.min.js", document.head, function() {
+            injectScript("BtClientCustomization/bt-resources/commons/js/jquery.viewport.js", document.head);
+          });
+        }
+        
+        function injectGwt() {
+        	injectScript("BtClientCustomization/BtClientCustomization.nocache.js", document.body);
+        }
+
+        function injectScript(src, wrapper, callback) {
+          //return new Promise(function(resolve, reject){
+          var element = document.createElement("script");
+          var path = window.location.pathname;
+          if(!path.endsWith('/'))
+        	  path = path + '/';
+          wrapper.appendChild(element);
+          element.setAttribute("src", path + src)
+          element.onload = function() {
+            if(callback)
+              callback();
+          }
+          //});
+        }
+
+        function injectLink(src, type, rel) {
+          var element = document.createElement("link");
+          var path = window.location.pathname;
+          if(!path.endsWith('/'))
+        	  path = path + '/';
+          element.setAttribute("href", path + src);
+          element.setAttribute("type", type);
+          element.setAttribute("rel", rel);
+          document.head.appendChild(element);
+        }
+        
+        function injectImg(src, id) {
+            var element = document.getElementById(id);
+            if (element != null) {
+              var path = window.location.pathname;
+              if(!path.endsWith('/'))
+          	    path = path + '/';
+              element.setAttribute("src", path + src);
+            }
+        }
+        
+  		function importModule(jsModule) {
+  			var importFunction = new Function("module", "return import(module);");
+        	return importFunction(jsModule);
+  		}
+  		
+  		function loadLocale() {
+  			try {
+	  			var servicesUrl = getServicesURL();
+	  			var accessId = getAccessId();
+	  			
+	  			var url = servicesUrl + "publicResource/dynamic/gme-locale?";
+	        	if (accessId != null)
+	        		url = url + "accessId=" + accessId + "&";
+	        	
+	        	url = url + "applicationId=tribefire-explorer";
+	        	
+	        	fetch(url)
+	  				.then(function(response) {
+	  					if (response.ok) {
+	    					response.text().then(function(text) {
+	      						createLocaleMeta(text);
+	    					});
+	    				}
+	    				
+	    				injectGwt();
+	  				}).catch(function(error) {
+	  					injectGwt();
+					});
+			} catch (e) {
+				//This is needed for old browsers
+				injectGwt();
+			}
+  		}
+  		
+  		function loadLogoAndTitle() {
+  			var servicesUrl = getServicesURL();
+  			var accessId = getAccessId();
+  			
+  			loadLogo(servicesUrl, accessId);
+  			loadTitle(servicesUrl, accessId);
+  		}
+  		
+  		function getServicesURL() {
+        	var nodes = document.getElementsByTagName("meta");
+        	var url = "/tribefire-services/";
+        	
+        	for (var i = 0; i < nodes.length; i++) {
+        		var node = nodes[i];
+        		if (node.getAttribute("name") == "tf:TRIBEFIRE_PUBLIC_SERVICES_URL") {
+        			url = node.getAttribute("content");
+        			if (!url.endsWith("/"))
+        				url = url + "/";
+        		}
+        	}
+        	
+        	if (url.includes("http")) //absolute url
+				return url;
+				
+			var new_url;
+			if (location.protocol.includes("https:"))
+				new_url = "https:";
+			else
+				new_url = "http:";
+				
+			return new_url + "//" + location.host + url;
+        }
+        
+        function getAccessId() {
+        	const queryString = window.location.search;
+			const urlParams = new URLSearchParams(queryString);
+			
+			if (urlParams.has("accessId"))
+        		return urlParams.get("accessId");
+        		
+        	return null;
+        }
+        
+        function loadLogo(servicesUrl, accessId) {
+        	var downloadingImage = new Image();
+			downloadingImage.onload = function() {
+    			createLogoMeta(this.src);
+			};
+			
+			downloadingImage.onerror = function() {
+				var image = document.getElementById("loadingLogoImage");
+				var url = "BtClientCustomization/bt-resources/commons/login/logo.svg";
+				if (image != null)
+    				image.src = url;
+    			createLogoMeta(url);
+			};
+			
+			var imageSource = servicesUrl + "publicResource/dynamic/gme-logo?";
+			if (accessId != null)
+				imageSource = imageSource + "accessId=" + accessId + "&";
+				
+			imageSource = imageSource + "applicationId=tribefire-modeler";
+			
+			downloadingImage.src = imageSource;
+			
+			var image = document.getElementById("loadingLogoImage");
+			if (image != null)
+				image.src = imageSource;
+        }
+        
+        function loadTitle(servicesUrl, accessId) {
+        	var url = servicesUrl + "publicResource/dynamic/gme-title?";
+        	if (accessId != null)
+        		url = url + "accessId=" + accessId + "&";
+        	
+        	url = url + "applicationId=tribefire-modeler";
+        	
+        	fetch(url)
+  				.then(function(response) {
+  					if (response.ok) {
+    					response.text().then(function(text) {
+      						var element = document.getElementById("loadingTitleText");
+      						if (element != null)
+      							element.innerHTML = text;
+      						createTitleMeta(text);
+    					});
+    				} else {
+    					createTitleMeta("");
+    				}
+  				}).catch(function(error) {
+  					createTitleMeta("");
+				});
+        }
+        
+        function startProgressBar() {
+        	timer = setInterval(updateProgressBar, 100);
+        }
+        
+        function updateProgressBar() {
+        	if (progressBarValue < 25) {
+        		progressBarValue = progressBarValue + 1;
+        		var progressBar = document.getElementById("loadingProgressBar");
+        		if (progressBar != null) {
+        			progressBar.style.width = progressBarValue + '%';
+        			return;
+        		}
+        	}
+        	
+        	clearInterval(timer);
+        }
+        
+        function createLocaleMeta(locale) {
+        	if (!locale || locale.length === 0)
+        		return;
+        		
+        	var meta = document.createElement('meta');
+        	meta.setAttribute('name', 'gwt:property');
+        	meta.content = "locale=" + locale;
+        	document.getElementsByTagName('head')[0].appendChild(meta);
+        }
+        
+        function createLogoMeta(logoUrl) {
+        	var meta = document.createElement('meta');
+        	meta.setAttribute('name', 'tf:TRIBEFIRE_LOGO_URL');
+        	meta.content = logoUrl;
+        	document.getElementsByTagName('head')[0].appendChild(meta);
+        }
+        
+        function createTitleMeta(title) {
+        	var meta = document.createElement('meta');
+        	meta.setAttribute('name', 'tf:TRIBEFIRE_LOADING_TITLE');
+        	meta.content = title;
+        	document.getElementsByTagName('head')[0].appendChild(meta);
+        }
+      </script>
+  </head>
+
+  <body id="clientEntryPoint" class="oneColFixCtr" onload="startProgressBar(); loadLocale(); inject(); loadLogoAndTitle();">
+
+    <!--add loading indicator while the app is being loaded-->
+    <div id="loading">
+    	<div class="loadingLogoParent">
+    		<img id="loadingLogoImage"/>
+    	</div>
+      	<div id="loadingTitleText">&nbsp;</div>
+      	<div id="loadingMessageText">Loading...</div>
+      	
+      	<div class="progress-grey">
+  			<div id="loadingProgressBar" class="progress-blue" style="height:2px; width:1%"></div>
+		</div>
+    </div>
+
+    <!-- <script type="text/javascript" language="javascript" src="BtClientCustomization/BtClientCustomization.nocache.js"></script> -->
+
+    <!-- OPTIONAL: include this if you want history support -->
+    <iframe src="javascript:''" id="__gwt_historyFrame" style="position:absolute;width:0;height:0;border:0"></iframe>
+  </body>
+
+  </html>

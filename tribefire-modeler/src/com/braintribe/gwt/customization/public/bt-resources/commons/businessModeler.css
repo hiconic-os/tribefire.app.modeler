@@ -1,0 +1,136 @@
+@CHARSET "UTF-8";
+
+#businessModelerTopBannerImageWrapper,
+#businessModelerTopBannerDatapedia, #businessModelerTopBannerProperties,
+#businessModelerTopBannerSettings, #businessModelerTopBannerUser, #businessModelerTopBannerSwitchTo, #businessModelerTopBannerModeler{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    line-height: 100%;
+    font-size: 24px;
+    height: 100%;
+    cursor: pointer;
+}
+
+#businessModelerTopBanner > a, 
+#businessModelerTopBanner > a:visited, 
+#businessModelerTopBanner > a:hovered{
+    color: white;
+    text-decoration: none;
+    cursor: default;
+    line-height: 100%;
+
+}
+
+#businessModelerTopBanner{
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 5px;
+    background-color: #fbfbfb;
+}
+
+#businessModelerTopBannerImageWrapper{
+	margin-left: 4px;
+    margin-right: 4px;
+    border-radius: 50%;   
+    line-height: 64px;
+    text-align: center;
+    height: 64px;
+    vertical-align: middle;
+    float: left;
+}
+
+#businessModelerTopBannerRightWrapper{
+    display: inline-block;
+    float: right;
+    padding-right: 15px;
+}
+
+#businessModelerTopBannerModeler{
+    margin-left: 4px;
+    margin-right: 4px;
+    background: #b0edff;
+    border-radius: 50%;   
+    line-height: 64px;
+    text-align: center;
+    width: 64px;
+    height: 64px;
+    vertical-align: middle;
+}
+
+#businessModelerTopBannerSwitchTo{
+   margin-left: 4px;
+    margin-right: 4px;
+    background: #b0edff;
+    border-radius: 50%;   
+    line-height: 64px;
+    text-align: center;
+    width: 64px;
+    height: 64px;
+    vertical-align: middle;
+}
+
+#businessModelerTopBannerDatapedia{
+    margin-left: 4px;
+    margin-right: 4px;
+    background: #b0edff;
+    border-radius: 50%;   
+    line-height: 64px;
+    text-align: center;
+    width: 64px;
+    height: 64px;
+    vertical-align: middle;
+}
+
+#businessModelerTopBannerProperties{
+    margin: 4px;
+    background: #ffcf9b;
+    border-radius: 50%;   
+    line-height: 64px;
+    text-align: center;
+    width: 64px;
+    height: 64px;
+    vertical-align: middle;
+}
+
+#businessModelerTopBannerSettings{
+	margin-left: 4px;
+    margin-right: 4px;
+    background: none;
+    border-radius: 50%;   
+    line-height: 64px;
+    text-align: center;
+    width: 64px;
+    height: 64px;
+    vertical-align: middle;
+}
+
+#businessModelerTopBannerUser{
+    color: silver;
+    margin-left: 4px;
+    margin-right: 4px;
+    background: none;
+    border-radius: 5px;   
+    line-height: 64px;
+    text-align: center;
+    width: 64px;
+    height: 64px;
+    vertical-align: middle;
+}
+
+.propertyGroupRuler{
+	text-align: left;	
+}
+
+.simplePropertyTypeButton{
+	font-size:24px;	
+}
+
+.simpleTypeMenuEntry{
+    font-size:24px; 	
+}
+
+.simplePropertyPanelEntry, .constantEntry{
+    height: 50px;
+}

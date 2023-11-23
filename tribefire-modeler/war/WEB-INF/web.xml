@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ============================================================================ 
+	Braintribe IT-Technologies GmbH - www.braintribe.com Copyright Braintribe 
+	IT-Technologies GmbH, Austria, 2002-2015 - All Rights Reserved It is strictly 
+	forbidden to copy, modify, distribute or use this code without written permission 
+	To this file the Braintribe License Agreement applies.
+	============================================================================ -->
+
+<web-app>
+
+	<display-name>BusinessModeler-1.0</display-name>
+
+	<description>tribefire Business Modeler version 2.0</description>
+
+	<welcome-file-list>
+		<welcome-file>ClientEntryPoint.html</welcome-file>
+	</welcome-file-list>
+	
+	<servlet>
+		<servlet-name>SymbolTranslationServlet</servlet-name>
+		<servlet-class>com.braintribe.web.gwt.symbol.SymbolTranslationServlet
+		</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>ClientEntryPointServlet</servlet-name>
+		<jsp-file>/ClientEntryPoint.html</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SymbolTranslationServlet</servlet-name>
+		<url-pattern>/symbolTranslation</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>ClientEntryPointServlet</servlet-name>
+		<url-pattern>/ClientEntryPoint.html</url-pattern>
+	</servlet-mapping>
+	
+	<filter>
+		<filter-name>gwtCacheControlFilter</filter-name>
+		<filter-class>com.braintribe.web.gwt.cache.GWTCacheControlFilter</filter-class>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>gwtCacheControlFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+</web-app>
